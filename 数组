@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- saved from url=(0159)file:///C:/Users/%E5%BD%B3%E4%BA%8D%E7%94%B7/Desktop/WebDemo/%E6%95%B0%E7%BB%84%E7%BB%83%E4%B9%A0/%E6%95%B0%E7%BB%84%E7%BB%83%E4%B9%A0.html?__hbt=1602645630688 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>数组练习</title>
+    <style>
+    	*{
+    		padding: 0;
+    		margin: 0;
+    	}
+        .git-name-url-box{
+            padding: 15px 20px;
+            width: 600px;
+            height: 500px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px #937b7b;
+            overflow-y: auto;
+            position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+        }
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li{
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+        ul li label{
+            display: block;
+            width: 100px;
+            margin-left: 5px;
+        }
+        ul li span{
+            display: block;
+            width: calc(100% - 100px);
+            text-align: center;
+        }
+        ul li a{
+            display: block;
+            width: calc(100% - 100px);
+            text-align: center;
+            color: #6eb7d8;
+            text-decoration: none;
+            /** 将多余的内容显示为省略号 前提是必须设置为块元素 且设置宽度 */
+            text-overflow: ellipsis; /** 设置内容溢出后的样式 */
+            white-space: nowrap; /** 设置不换行 */
+            overflow: hidden; /** 设置内容不溢出 */
+        }
+        ul li a:hover{
+             color: #d882b4;
+        }
+        .pink{
+        	background-color: pink;
+        }
+        .yellow{
+        	background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+   <!--
+      1、盒子水平垂直居中
+      2、把所有人数据录入到数组中
+      3、列表偶数行和奇数行颜色不一致
+   -->
+   <div class="git-name-url-box">
+        <ul id="ul"><li>
+                     <label>姓名</label>
+                     <span>码云项目地址</span>
+                   </li>
+                <li class="pink">
+                <label>1、张鲲鹏</label>
+                <a target="_blank" href="https://gitee.com/zr041598/wed.html">https://gitee.com/zr041598/wed.html</a>
+            </li>
+                <li class="yellow">
+                <label>2、向朝伟</label>
+                <a target="_blank" href="https://gitee.com/xianghei/web.git">https://gitee.com/xianghei/web.git</a>
+            </li>
+                <li class="pink">
+                <label>3、何健豪</label>
+                <a target="_blank" href="https://gitee.com/hjh-cls/web-dome">https://gitee.com/hjh-cls/web-dome</a>
+            </li>
+                <li class="yellow">
+                <label>4、蒲悦添</label>
+                <a target="_blank" href="https://gitee.com/pu-yuetian/pyt">https://gitee.com/pu-yuetian/pyt</a>
+            </li>
+                <li class="pink">
+                <label>5、何能升</label>
+                <a target="_blank" href="https://gitee.com/cdzqh/web-demo">https://gitee.com/cdzqh/web-demo</a>
+            </li>
+                <li class="yellow">
+                <label>6、刘佩伶</label>
+                <a target="_blank" href="https://gitee.com/liu-peiling/web-front-end/tree/master/web-demo">https://gitee.com/liu-peiling/web-front-end/tree/master/web-demo</a>
+            </li>
+                <li class="pink">
+                <label>7、蒲俊名</label>
+                <a target="_blank" href="https://gitee.com/CX330_Ormosia/ormosia/tree/master/XSWebDamo">https://gitee.com/CX330_Ormosia/ormosia/tree/master/XSWebDamo</a>
+            </li>
+                <li class="yellow">
+                <label>8、杨涛</label>
+                <a target="_blank" href="https://gitee.com/yang-taon/multiplication-table.git">https://gitee.com/yang-taon/multiplication-table.git</a>
+            </li>
+                <li class="pink">
+                <label>9、菜钊</label>
+                <a target="_blank" href="https://gitee.com/cai-zhao/caizhao">https://gitee.com/cai-zhao/caizhao</a>
+            </li>
+                <li class="yellow">
+                <label>10、蒋志强</label>
+                <a target="_blank" href="https://gitee.com/gaat/web">https://gitee.com/gaat/web</a>
+            </li>
+                <li class="pink">
+                <label>11、吴涵</label>
+                <a target="_blank" href="https://gitee.com/wuhan-h/webdome">https://gitee.com/wuhan-h/webdome</a>
+            </li>
+                <li class="yellow">
+                <label>12、李海</label>
+                <a target="_blank" href="https://gitee.com/sannlihai/haige">https://gitee.com/sannlihai/haige</a>
+            </li>
+                <li class="pink">
+                <label>13、吴亿</label>
+                <a target="_blank" href="https://gitee.com/hello-wu-yi/web001.git">https://gitee.com/hello-wu-yi/web001.git</a>
+            </li>
+                <li class="yellow">
+                <label>14、杜明洋</label>
+                <a target="_blank" href="https://gitee.com/xdmyo/xiaodu">https://gitee.com/xdmyo/xiaodu</a>
+            </li>
+                <li class="pink">
+                <label>15、王晨晓</label>
+                <a target="_blank" href="https://gitee.com/kite97/wang_chenxiao">https://gitee.com/kite97/wang_chenxiao</a>
+            </li>
+                <li class="yellow">
+                <label>16、李卓阳</label>
+                <a target="_blank" href="https://gitee.com/yjsp1919810/web-demo">https://gitee.com/yjsp1919810/web-demo</a>
+            </li>
+                <li class="pink">
+                <label>17、王雨洁</label>
+                <a target="_blank" href="https://gitee.com/augenstern0/wangyujie">https://gitee.com/augenstern0/wangyujie</a>
+            </li>
+                <li class="yellow">
+                <label>18、刘丹</label>
+                <a target="_blank" href="https://gitee.com/liudan1010/webdome">https://gitee.com/liudan1010/webdome</a>
+            </li>
+                <li class="pink">
+                <label>19、吕鹏程</label>
+                <a target="_blank" href="https://gitee.com/lvpc666/web-demo">https://gitee.com/lvpc666/web-demo</a>
+            </li>
+                <li class="yellow">
+                <label>20、胡佳奇</label>
+                <a target="_blank" href="https://gitee.com/mayoumimywifi/web-demo">https://gitee.com/mayoumimywifi/web-demo</a>
+            </li>
+                <li class="pink">
+                <label>21、刘宇</label>
+                <a target="_blank" href="https://gitee.com/cd-yu/web-demo">https://gitee.com/cd-yu/web-demo</a>
+            </li>
+                <li class="yellow">
+                <label>22、黄周</label>
+                <a target="_blank" href="https://gitee.com/huangzhou2001/webdomo">https://gitee.com/huangzhou2001/webdomo</a>
+            </li>
+                <li class="pink">
+                <label>23、唐川富</label>
+                <a target="_blank" href="https://gitee.com/tangchuanfu/web-demo1">https://gitee.com/tangchuanfu/web-demo1</a>
+            </li>
+                <li class="yellow">
+                <label>24、朱杨</label>
+                <a target="_blank" href="https://gitee.com/pious-god/projects">https://gitee.com/pious-god/projects</a>
+            </li>
+                <li class="pink">
+                <label>25、李露</label>
+                <a target="_blank" href="https://gitee.com/lilu-l/web-demo">https://gitee.com/lilu-l/web-demo</a>
+            </li>
+                <li class="yellow">
+                <label>26、刘川虹</label>
+                <a target="_blank" href="https://gitee.com/ioncecon/test">https://gitee.com/ioncecon/test</a>
+            </li>
+                <li class="pink">
+                <label>27、杨雪</label>
+                <a target="_blank" href="https://gitee.com/yangxue616/webdome">https://gitee.com/yangxue616/webdome</a>
+            </li>
+                <li class="yellow">
+                <label>28、李虹廷</label>
+                <a target="_blank" href="https://gitee.com/StanLHT/web-deom/tree/master/">https://gitee.com/StanLHT/web-deom/tree/master/</a>
+            </li></ul>
+   </div>
+   <script>
+       // 初始数据源
+       const nameUrlList = [
+           {
+               name: '张鲲鹏',
+               url: 'https://gitee.com/zr041598/wed.html'
+           },
+           {
+               name: '向朝伟',
+               url: 'https://gitee.com/xianghei/web.git'
+           },
+           {
+               name: '何健豪',
+               url: 'https://gitee.com/hjh-cls/web-dome'
+           },
+           {
+               name: '蒲悦添',
+               url: 'https://gitee.com/pu-yuetian/pyt'
+           },
+           {
+               name: '何能升',
+               url: 'https://gitee.com/cdzqh/web-demo'
+           },
+           {
+               name: '刘佩伶',
+               url: 'https://gitee.com/liu-peiling/web-front-end/tree/master/web-demo'
+           },
+           {
+               name: '蒲俊名',
+               url: 'https://gitee.com/CX330_Ormosia/ormosia/tree/master/XSWebDamo'
+           },
+           {
+		       name: '杨涛',
+		       url: 'https://gitee.com/yang-taon/multiplication-table.git'
+		   },
+		   {
+		       name: '菜钊',
+		       url: 'https://gitee.com/cai-zhao/caizhao'
+		   },
+		   {
+		       name: '蒋志强',
+		       url: 'https://gitee.com/gaat/web'
+		   },
+		   {
+		       name: '吴涵',
+		       url: 'https://gitee.com/wuhan-h/webdome'
+		   },
+		   {
+		       name: '李海',
+		       url: 'https://gitee.com/sannlihai/haige'
+		   },
+		   {
+		       name: '吴亿',
+		       url: 'https://gitee.com/hello-wu-yi/web001.git'
+		   },
+		   {
+		       name: '杜明洋',
+		       url: 'https://gitee.com/xdmyo/xiaodu'
+		   },
+		   {
+		       name: '王晨晓',
+		       url: 'https://gitee.com/kite97/wang_chenxiao'
+		   },
+		   {
+		       name: '李卓阳',
+		       url: 'https://gitee.com/yjsp1919810/web-demo'
+		   },
+		   {
+		       name: '王雨洁',
+		       url: 'https://gitee.com/augenstern0/wangyujie'
+		   },
+		   {
+		       name: '刘丹',
+		       url: 'https://gitee.com/liudan1010/webdome'
+		   },
+		   {
+		       name: '吕鹏程',
+		       url: 'https://gitee.com/lvpc666/web-demo'
+		   },
+		   {
+		       name: '胡佳奇',
+		       url: 'https://gitee.com/mayoumimywifi/web-demo'
+		   },
+		   {
+		       name: '刘宇',
+		       url: 'https://gitee.com/cd-yu/web-demo'
+		   },
+		   {
+		       name: '黄周',
+		       url: 'https://gitee.com/huangzhou2001/webdomo'
+		   },
+		   {
+		       name: '唐川富',
+		       url: 'https://gitee.com/tangchuanfu/web-demo1'
+		   },
+		   {
+		       name: '朱杨',
+		       url: 'https://gitee.com/pious-god/projects'
+		   },
+		   {
+		       name: '李露',
+		       url: 'https://gitee.com/lilu-l/web-demo'
+		   },
+		   {
+		       name: '刘川虹',
+		       url: 'https://gitee.com/ioncecon/test'
+		   },
+		   {
+		       name: '杨雪',
+		       url: 'https://gitee.com/yangxue616/webdome'
+		   },
+		   {
+		       name: '李虹廷',
+		       url: 'https://gitee.com/StanLHT/web-deom/tree/master/'
+		   }
+       ];
+       // 设置标签字符串
+       let liStr = `<li>
+                     <label>姓名</label>
+                     <span>码云项目地址</span>
+                   </li>`;
+       // 遍历数组 并生成每一行的html代码
+       nameUrlList.forEach(function (item, index) {
+       	if(index%2==0){
+       		liStr += `
+                <li class="pink">
+                <label>${index+1+'、'}${item.name}</label>
+                <a target="_blank" href="${item.url}">${item.url}</a>
+            </li>`
+       	}else{
+       		liStr += `
+                <li class="yellow">
+                <label>${index+1+'、'}${item.name}</label>
+                <a target="_blank" href="${item.url}">${item.url}</a>
+            </li>`
+       	}
+           
+       });
+       // 获取Dom节点
+       let ulElem = document.getElementById('ul');
+       // 替换dom节点内的html标签内容
+       ulElem.innerHTML = liStr;
+
+
+   </script>
+
+<!--   <script>-->
+<!--       const names = ['张鲲鹏', '向朝伟', '何健豪', '蒲悦添', '何能升'],-->
+<!--             urls = ['https://gitee.com/zr041598/wed.html', 'https://gitee.com/xianghei/web.git', 'https://gitee.com/hjh-cls/web-dome', 'https://gitee.com/pu-yuetian/pyt', 'https://gitee.com/cdzqh/web-demo'];-->
+<!--       // 设置标签字符串-->
+<!--       let liStr = `<li>-->
+<!--                     <label>姓名</label>-->
+<!--                     <span>码云项目地址</span>-->
+<!--                   </li>`;-->
+<!--       // 循环生成每一行的标签-->
+<!--       for (let i = 0; i < names.length; i++){-->
+<!--            let name = names[i],-->
+<!--                url = urls[i];-->
+<!--            // alert('名称：'+name + ' 链接：'+url);-->
+<!--            liStr += `-->
+<!--                <li>-->
+<!--                <label>${name}</label>-->
+<!--                <a target="_blank" href="${url}">${url}</a>-->
+<!--            </li>-->
+<!--            `;-->
+<!--       }-->
+<!--       // 获取Dom节点-->
+<!--       let ulElem = document.getElementById('ul');-->
+<!--       // 替换dom节点内的html标签内容-->
+<!--       ulElem.innerHTML = liStr;-->
+<!--   </script>-->
+
+
+</body></html>
