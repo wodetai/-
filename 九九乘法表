@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js学习</title>
+    <style>
+         .js-content-box{
+             margin: auto;
+             width: 800px;
+             height: 500px;
+         }
+         table{
+             border: 1px solid #eee;
+         }
+         .one{
+             width: 120px;
+             height: 40px;
+             background-color: red;
+         }
+         .two{
+         	 width: 120px;
+             height: 40px;
+             background-color: antiquewhite;
+         }         
+    </style>
+</head>
+<body>
+    <div class="js-content-box">
+         <table id="table"></table>
+    </div>
+    <script>
+          let outElem = document.getElementById('table'); // 获取dom元素
+          let tableHtml = '';
+          for (let i = 1; i <= 9;i++){
+              tableHtml += '<tr>';
+              for (let j = 1;j <= i;j++){
+				  if(i==5){
+					  tableHtml += `<td class='one'>${j} * ${i} = ${i * j}</td>`;
+				  }else{
+					  tableHtml += `<td class='two'>${j} * ${i} = ${i * j}</td>`;
+				  }                 
+              }
+              tableHtml += '</tr>';
+              console.log(`第${i}次循环：`,tableHtml);
+          }
+          outElem.innerHTML = tableHtml;
+    </script>
+</body>
+</html>
